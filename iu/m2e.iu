@@ -1,0 +1,2 @@
+REPO_LIST=http://download.eclipse.org/technology/m2e/releases
+IU_LIST=org.eclipse.m2e.feature.feature.group
