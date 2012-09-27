@@ -1,0 +1,2 @@
+REPO_LIST=http://update.atlassian.com/atlassian-eclipse-plugin/e4.2
+IU_LIST=com.atlassian.connector.eclipse.feature.group,com.atlassian.connector.eclipse.jira.feature.group,com.atlassian.connector.eclipse.subversive.feature.group

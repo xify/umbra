@@ -1,0 +1,2 @@
+REPO_LIST=http://update.atlassian.com/eclipse/clover
+IU_LIST=com.cenqua.clover.feature.group
