@@ -1,16 +1,10 @@
 #!/bin/bash
-. ./env.rc
+DIR=$( cd "$( dirname "$0" )/.." && pwd )
+. $DIR/etc/env.rc
 
-if [[ ! -f iu/$1.iu ]]; then
-	echo "No such IU exsits."
-	exit -1
-fi
-
-. iu/$1.iu
-
-INSTALL_NAME=$PROFILE_NAME
-#REPO_LIST=$2
-#IU_LIST=$3
+INSTALL_NAME=$1
+REPO_LIST=$2
+IU_LIST=$3
 
 # <profile> <repositories list> <IUs list>
 function add {
