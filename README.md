@@ -13,6 +13,6 @@ Homebrew-inspired poor man's Eclipse installation manager.
 
 - cd ~
 - git clone http://github.navercorp.jp/pantera/umbra Eclipse
-- cd bin
-- ./umbra-setup
-- ./umbra-install %lt;what you want to install&gt;
+- bin/umbra-setup
+- bin/umbra-list ; echo "Umbra can install these IUs"
+- bin/umbra-install \<what you want to install>
