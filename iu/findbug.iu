@@ -1,0 +1,2 @@
+REPO_LIST=http://findbugs.cs.umd.edu/eclipse/
+IU_LIST=edu.umd.cs.findbugs.plugin.eclipse.feature.group

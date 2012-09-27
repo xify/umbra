@@ -1,0 +1,2 @@
+REPO_LIST=http://dl.google.com/eclipse/plugin/4.2
+IU_LIST=com.google.gdt.eclipse.suite.e42.feature.feature.group,com.google.gwt.eclipse.sdkbundle.e42.feature.feature.group

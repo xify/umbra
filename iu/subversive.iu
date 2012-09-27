@@ -1,0 +1,2 @@
+REPO_LIST=http://ftp.jaist.ac.jp/pub/eclipse/technology/subversive/1.0/juno-site/,http://community.polarion.com/projects/subversive/download/eclipse/3.0/juno-site/,http://community.polarion.com/projects/subversive/download/integrations/juno-site/
+IU_LIST=org.eclipse.team.svn.feature.group,org.eclipse.team.svn.resource.ignore.rules.jdt.feature.group,org.eclipse.team.svn.mylyn.feature.group,org.polarion.eclipse.team.svn.connector.feature.group,org.polarion.eclipse.team.svn.connector.svnkit17.feature.group,org.eclipse.team.svn.revision.graph.feature.group

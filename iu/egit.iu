@@ -1,0 +1,2 @@
+REPO_LIST=http://download.eclipse.org/egit/updates
+IU_LIST=org.eclipse.jgit.feature.group,org.eclipse.egit.feature.group
