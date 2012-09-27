@@ -1,7 +1,7 @@
 umbra
 =========
 
-A simple tool useful when managing Eclipse installations.
+Homebrew-inspired poor man's Eclipse installation manager.
 
 # Features
 
@@ -11,8 +11,8 @@ A simple tool useful when managing Eclipse installations.
 
 # Quickstart
 
-- mkdir ~/Eclipse; cd ~/Eclipse
-- git clone http://github.navercorp.jp/pantera/umbra p2-script
-- cd p2-script
+- cd ~
+- git clone http://github.navercorp.jp/pantera/umbra Eclipse
+- cd bin
 - ./umbra-setup
-- ./umbra-install <what you want to install>
+- ./umbra-install %lt;what you want to install&gt;

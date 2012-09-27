@@ -1,4 +1,6 @@
-. ./env.rc
+#!/bin/bash
+DIR=$( cd "$( dirname "$0" )/.." && pwd )
+. $DIR/etc/env.rc
 
 INSTALL_NAME=juno
 PROFILE_NAME=juno
