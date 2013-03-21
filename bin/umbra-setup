@@ -6,7 +6,7 @@ INSTALL_NAME=juno
 PROFILE_NAME=juno
 
 mkdir -p ${BUNDLE_POOL}
-mkdir -P ${PROFILE_HOME}
+mkdir -p ${PROFILE_HOME}
 mkdir -p ${INSTALL_HOME}
 mkdir -p ${PLATFORM_RUNTIME_HOME}
 
