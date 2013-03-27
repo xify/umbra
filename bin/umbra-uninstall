@@ -2,12 +2,19 @@
 DIR=$( cd "$( dirname "$0" )/.." && pwd )
 . $DIR/etc/env.rc
 
-INSTALL_NAME=$1
-REPO_LIST=$2
-IU_LIST=$3
+if [[ ! -f $DIR/iu/$1.iu ]]; then
+	echo "No such IU exsits."
+	exit -1
+fi
+
+. $UMBRA_HOME/iu/$1.iu
+
+INSTALL_NAME=$PROFILE_NAME
+#REPO_LIST=$2
+#IU_LIST=$3
 
 # <profile> <repositories list> <IUs list>
-function add {
+function remove {
     echo Add more artifacts to Eclipse IDE
 	echo ${IU_LIST} from ${REPO_LIST}
 java -jar ${PLATFORM_RUNTIME_HOME}/plugins/org.eclipse.equinox.launcher_*.jar \
@@ -23,4 +30,4 @@ java -jar ${PLATFORM_RUNTIME_HOME}/plugins/org.eclipse.equinox.launcher_*.jar \
     -vmargs -Xmx512m
 }
 
-add ${INSTALL_NAME} ${REPO_LIST} ${IU_LIST}
+remove ${INSTALL_NAME} ${REPO_LIST} ${IU_LIST}
