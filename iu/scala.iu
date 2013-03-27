@@ -1,2 +1,2 @@
 REPO_LIST=http://download.scala-ide.org/sdk/e38/scala210/stable/site
-IU_LIST=org.scala-ide.sdt.feature.feature.group
+IU_LIST=org.scala-ide.sdt.feature.feature.group,org.scala-ide.sdt.scalatest.feature.feature.group,org.scalaide.worksheet.feature.feature.group
