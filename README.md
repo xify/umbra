@@ -13,7 +13,7 @@ Homebrew-inspired poor man's Eclipse installation manager.
 
 ```shell
 cd ~
-git clone https://github.com/javanese/umbra.git Eclipse
+git clone https://github.com/xify/umbra.git Eclipse
 cd Eclipse
 bin/umbra-setup
 bin/umbra-list ; echo "Umbra can install these IUs"
