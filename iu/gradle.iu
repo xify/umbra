@@ -1,0 +1,2 @@
+REPO_LIST=http://dist.springsource.com/release/TOOLS/update/e4.2,http://dist.springsource.com/release/TOOLS/composite/e4.2
+IU_LIST=org.springsource.ide.eclipse.gradle.feature.feature.group
