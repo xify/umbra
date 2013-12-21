@@ -2,21 +2,26 @@
 DIR=$( cd "$( dirname "$0" )/.." && pwd )
 . $DIR/etc/env.rc
 
-INSTALL_NAME=juno
-PROFILE_NAME=juno
+# TODO: check if $1 is given.
+
+INSTALL_NAME=kepler
+PROFILE_NAME=kepler
 
 mkdir -p ${BUNDLE_POOL}
 mkdir -p ${PROFILE_HOME}
-mkdir -p ${INSTALL_HOME}
+mkdir -p ${INSTALL_HOME}/$1
 mkdir -p ${PLATFORM_RUNTIME_HOME}
 
 pushd ${PLATFORM_RUNTIME_HOME}/..
-curl ${PLATFORM_RUNTIME_URL} -o ${PLATFORM_RUNTIME_FILE} 
+if [ -n -f ${PLATFORM_RUNTIME_FILE} ]
+    then
+        curl ${PLATFORM_RUNTIME_URL} -o ${PLATFORM_RUNTIME_FILE} 
+fi
 tar -xzf ${PLATFORM_RUNTIME_FILE}
 popd
 
-# EPP Reporting
-PACKAGE_NAME=epp.package.reporting
+# EPP Java EE
+PACKAGE_NAME=epp.package.jee
 
 # <profile> <top-level iu>
 function install {
@@ -24,7 +29,7 @@ function install {
 java -jar ${PLATFORM_RUNTIME_HOME}/plugins/org.eclipse.equinox.launcher_*.jar \
     -nosplash \
     -application org.eclipse.equinox.p2.director \
-    -repository ${BASE_REPO},http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/packages/juno/ \
+    -repository ${BASE_REPO},http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/packages/kepler/ \
     -installIU $2 \
     -destination ${INSTALL_HOME}/$1 \
     -profile $1 \
