@@ -9,11 +9,11 @@ PROFILE_NAME=kepler
 
 mkdir -p ${BUNDLE_POOL}
 mkdir -p ${PROFILE_HOME}
-mkdir -p ${INSTALL_HOME}/$1
+mkdir -p ${INSTALL_HOME}/${INSTALL_NAME}
 mkdir -p ${PLATFORM_RUNTIME_HOME}
 
 pushd ${PLATFORM_RUNTIME_HOME}/..
-if [ -n -f ${PLATFORM_RUNTIME_FILE} ]
+if [ ! -f ${PLATFORM_RUNTIME_FILE} ]
     then
         curl ${PLATFORM_RUNTIME_URL} -o ${PLATFORM_RUNTIME_FILE} 
 fi
@@ -31,8 +31,8 @@ java -jar ${PLATFORM_RUNTIME_HOME}/plugins/org.eclipse.equinox.launcher_*.jar \
     -application org.eclipse.equinox.p2.director \
     -repository ${BASE_REPO},http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/packages/kepler/ \
     -installIU $2 \
-    -destination ${INSTALL_HOME}/$1 \
-    -profile $1 \
+    -destination ${INSTALL_HOME}/${INSTALL_NAME} \
+    -profile ${INSTALL_NAME} \
     -profileProperties org.eclipse.update.install.features=true \
 	-bundlepool ${BUNDLE_POOL} \
     -shared ${PROFILE_HOME} \
